@@ -9,6 +9,10 @@ EXTRACTED_FILE_DIRECTORY = "..//raw//extracted files"
 
 BERKLEY_DATA_SOURCE = "https://berkeley-earth-temperature.s3.us-west-1.amazonaws.com/Global/Complete_TAVG_daily.txt"
 
+JSON_PATH = "https://nyc3.digitaloceanspaces.com/owid-public/data/energy/owid-energy-data.json"
+XLSX_PATH = "https://nyc3.digitaloceanspaces.com/owid-public/data/energy/owid-energy-data.xlsx"
+CSV_PATH = "https://nyc3.digitaloceanspaces.com/owid-public/data/energy/owid-energy-data.csv"
+
 
 def download_files() -> None:
     kaggle.api.dataset_download_files(
@@ -29,3 +33,18 @@ def parse_berkley_earth_temperature_dataset(url=BERKLEY_DATA_SOURCE):
     df = pd.read_csv(url, header=22)
     df.columns = df.columns.str.replace("% ", "")
     return df
+
+
+def download_json_world_energy_dataset():
+    json_dataset = pd.read_json(JSON_PATH)
+    return json_dataset
+
+
+def download_xlsx_world_energy_dataset():
+    excel_dataset = pd.read_excel(XLSX_PATH)
+    return excel_dataset
+
+
+def download_csv_world_energy_dataset():
+    csv_dataset = pd.read_csv(CSV_PATH)
+    return csv_dataset
