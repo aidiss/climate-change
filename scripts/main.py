@@ -4,14 +4,22 @@ import pandas as pd
 
 
 CLIMATE_CHANGE_API = "berkeleyearth/climate-change-earth-surface-temperature-data"
-ZIPED_FILE_DIRECTORY = "..//raw//ziped//climate-change-earth-surface-temperature-data.zip"
+ZIPED_FILE_DIRECTORY = (
+    "..//raw//ziped//climate-change-earth-surface-temperature-data.zip"
+)
 EXTRACTED_FILE_DIRECTORY = "..//raw//extracted files"
 
 BERKLEY_DATA_SOURCE = "https://berkeley-earth-temperature.s3.us-west-1.amazonaws.com/Global/Complete_TAVG_daily.txt"
 
-JSON_PATH = "https://nyc3.digitaloceanspaces.com/owid-public/data/energy/owid-energy-data.json"
-XLSX_PATH = "https://nyc3.digitaloceanspaces.com/owid-public/data/energy/owid-energy-data.xlsx"
-CSV_PATH = "https://nyc3.digitaloceanspaces.com/owid-public/data/energy/owid-energy-data.csv"
+JSON_PATH = (
+    "https://nyc3.digitaloceanspaces.com/owid-public/data/energy/owid-energy-data.json"
+)
+XLSX_PATH = (
+    "https://nyc3.digitaloceanspaces.com/owid-public/data/energy/owid-energy-data.xlsx"
+)
+CSV_PATH = (
+    "https://nyc3.digitaloceanspaces.com/owid-public/data/energy/owid-energy-data.csv"
+)
 
 
 def download_files() -> None:
