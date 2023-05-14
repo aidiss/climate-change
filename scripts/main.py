@@ -25,7 +25,7 @@ CSV_PATH = (
 def download_files() -> None:
     kaggle.api.dataset_download_files(
         dataset=CLIMATE_CHANGE_API,
-        path="ziped",
+        path="raw//ziped",
         quiet=False,
         force=False,
     )
