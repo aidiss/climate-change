@@ -9,6 +9,7 @@ ZIPED_FILE_DIRECTORY = (
 )
 EXTRACTED_FILE_DIRECTORY = "..//raw//extracted files"
 
+
 JSON_PATH = (
     "https://nyc3.digitaloceanspaces.com/owid-public/data/energy/owid-energy-data.json"
 )
