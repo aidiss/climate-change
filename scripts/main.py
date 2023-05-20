@@ -9,6 +9,8 @@ ZIPED_FILE_DIRECTORY = (
 )
 EXTRACTED_FILE_DIRECTORY = "..//raw//extracted files"
 
+BERKLEY_DATA_SOURCE = "https://berkeley-earth-temperature.s3.us-west-1.amazonaws.com/Global/Complete_TAVG_daily.txt"
+
 JSON_PATH = (
     "https://nyc3.digitaloceanspaces.com/owid-public/data/energy/owid-energy-data.json"
 )
