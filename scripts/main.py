@@ -4,10 +4,9 @@ import pandas as pd
 
 
 CLIMATE_CHANGE_API = "berkeleyearth/climate-change-earth-surface-temperature-data"
-ZIPED_FILE_DIRECTORY = (
-    "..//raw//ziped//climate-change-earth-surface-temperature-data.zip"
-)
-EXTRACTED_FILE_DIRECTORY = "..//raw//extracted files"
+
+ZIPED_FILE_DIRECTORY = "raw//ziped//climate-change-earth-surface-temperature-data.zip"
+EXTRACTED_FILE_DIRECTORY = "raw//extracted files"
 
 BERKLEY_DATA_SOURCE = "https://berkeley-earth-temperature.s3.us-west-1.amazonaws.com/Global/Complete_TAVG_daily.txt"
 
@@ -25,7 +24,7 @@ CSV_PATH = (
 def download_files() -> None:
     kaggle.api.dataset_download_files(
         dataset=CLIMATE_CHANGE_API,
-        path="ziped",
+        path="raw//ziped",
         quiet=False,
         force=False,
     )
