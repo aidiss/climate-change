@@ -1,12 +1,14 @@
 import kaggle
 import zipfile
 import pandas as pd
+import os
 
 
 CLIMATE_CHANGE_API = "berkeleyearth/climate-change-earth-surface-temperature-data"
 
 ZIPED_FILE_DIRECTORY = "raw//ziped//climate-change-earth-surface-temperature-data.zip"
 EXTRACTED_FILE_DIRECTORY = "raw//extracted files"
+KAGGLE_DATASET_FILENAME = "//GlobalTemperatures.csv"
 
 BERKLEY_DATA_SOURCE = "https://berkeley-earth-temperature.s3.us-west-1.amazonaws.com/Global/Complete_TAVG_daily.txt"
 
@@ -39,6 +41,15 @@ def unzip_file() -> None:
 def download_json_world_energy_dataset():
     json_dataset = pd.read_json(JSON_PATH)
     return json_dataset
+
+
+def load_kaggle_dataframe() -> pd.DataFrame:
+    path = EXTRACTED_FILE_DIRECTORY + KAGGLE_DATASET_FILENAME
+    if not os.path.isfile(path):
+        download_files()
+        unzip_file()
+    df = pd.read_csv(path)
+    return df
 
 
 def download_xlsx_world_energy_dataset():
