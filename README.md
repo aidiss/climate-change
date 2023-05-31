@@ -11,3 +11,8 @@ Install required modules:
 ```
 pip install -r requirements.txt
 ```
+
+Load Kaggle Climate change dataset:
+```
+python run.py --load_kaggle_dataframe
+```
