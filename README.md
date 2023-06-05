@@ -16,3 +16,8 @@ Load Kaggle Climate change dataset:
 ```
 python run.py --load_kaggle_dataframe
 ```
+
+Load Global Power Plant dataset:
+```
+python run.py --load_global_power_plant_dataframe
+```
